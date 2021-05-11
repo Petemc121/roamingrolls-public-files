@@ -453,7 +453,7 @@ const instructorRulePlus = document.getElementById("instructorRulePlus");
 inMinus.addEventListener("click", function () {
   if (
     confirm(
-      "Are you sure you want to delete this instructor? All their information will be permanently deleted"
+      "Are you sure you want to delete the last instructor in your list? All their information will be permanently deleted"
     )
   ) {
     cardArray[cardArray.length - 1].remove();
@@ -465,18 +465,22 @@ inMinus.addEventListener("click", function () {
 
 inMinus.addEventListener("mouseover", function () {
   instructorRuleMinus.style.opacity = "100%";
+  instructorRuleMinus.style.zIndex = "0";
 });
 
 inMinus.addEventListener("mouseout", function () {
   instructorRuleMinus.style.opacity = "0%";
+  instructorRuleMinus.style.zIndex = "-1";
 });
 
 inPlus2.addEventListener("mouseover", function () {
   instructorRulePlus.style.opacity = "100%";
+  instructorRulePlus.style.zIndex = "0";
 });
 
 inPlus2.addEventListener("mouseout", function () {
   instructorRulePlus.style.opacity = "0%";
+  instructorRulePlus.style.zIndex = "-1";
 });
 
 var instructEdit = document.getElementById("editInstruct");
