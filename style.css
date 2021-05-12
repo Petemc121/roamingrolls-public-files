@@ -1564,18 +1564,19 @@ h3 {
 #gymCards {
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 120%;
+  width: 110%;
   display: flex;
   justify-content: space-between !important;
   align-items: center;
   background-image: linear-gradient(to bottom right, #c7daec, #f3f4f5);
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: 280px;
+  height: 300px;
+  padding: 20px;
 }
 
 #postAuthor {
@@ -1584,17 +1585,17 @@ h3 {
 }
 
 .thumbnails {
-  border-radius: 5px 0px 0px 5px;
-  width: 450px;
-  height: 280px;
+  border-radius: 3px;
+  width: 250px;
+  height: 250px;
   margin-left: -1px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1300px) {
   #gymCards {
     flex-direction: column;
     height: 500px;
-    width: 350px;
+    width: 400px;
   }
 
   .gymInfo {
@@ -1602,9 +1603,11 @@ h3 {
   }
 
   .thumbnails {
-    width: 100%;
+    width: 200px;
     border-radius: 10px 10px 0px 0px;
     height: 200px;
+    margin-top: -5px;
+    margin-bottom: 5px;
   }
 }
 
@@ -1630,7 +1633,7 @@ h3 {
 
 .gymInfo {
   position: relative;
-  right: 80px;
+  right: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1802,6 +1805,19 @@ body {
   #slideshow-container {
     width: 90%;
   }
+
+  .tooltiptext {
+    margin-top: 65px;
+  }
+
+  #websiteIcon {
+    margin-top: 5px;
+  }
+
+  #facebookIcon {
+    margin-top: 5px;
+    margin-right: 6px;
+  }
 }
 
 #savePics {
@@ -1834,6 +1850,7 @@ body {
 .slideimg {
   width: 100%;
   max-height: 600px;
+  z-index: -1;
 }
 
 .myslideD {
@@ -1842,9 +1859,10 @@ body {
   min-height: 300px;
   width: 80%;
   margin-top: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
+  z-index: -1;
 }
 
 #logo-pic {
@@ -1854,13 +1872,13 @@ body {
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -100px;
-  margin-bottom: 20px;
+  margin-top: -200px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
 }
 
 #logoImg {
@@ -2143,6 +2161,7 @@ body {
   min-height: 300px;
   width: 100%;
   cursor: pointer;
+  z-index: -1;
 }
 
 #pageSectionMenu {
