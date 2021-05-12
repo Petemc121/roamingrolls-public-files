@@ -5,9 +5,11 @@
 
 
 <div id="gymCards">
+<a href="<?php the_permalink();?>">
     <img class="thumbnails" src="<?php
         the_post_thumbnail_url('thumbnail');
         ?>" alt="image">
+        </a>
     <div class="gymInfo">
         <h3 class="title mb-1"><a href="<?php the_permalink();?>"> <?php the_title(); ?></a></h3>
         <div class="meta mb-1">Last Updated: <span class="date"><?php 

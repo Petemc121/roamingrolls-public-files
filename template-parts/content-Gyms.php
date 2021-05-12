@@ -77,108 +77,6 @@ function is_valid_domain_name($domain_name){
 }
 
 
-// if (isset($_POST['sbhkdvhjsbhkvbhkvb'])) {
-
-//   if(wp_verify_nonce($_POST['sbhkdvhjsbhkvbhkvb'], 'price_update' )) {
-//       if(is_user_logged_in()) {
-
-//         if (isset($_POST['classPrice'])) {
-
-//           if($_POST['classPrice'] != "") {
-
-
-//           $classPrice = sanitize_text_field($_POST['classPrice']);
-
-//           if(is_numeric($classPrice)) {
-//                 update_post_meta($post_id, 'classPrice', $classPrice);
-
-//           } else {
-//                   echo "<style>#priceAlert{display:block !important;}</style>";
-
-//           }
-//         }else {
-//             delete_post_meta($post_id,'classPrice');
-//           }
-
-//         }
-
-//          if (isset($_POST['dayPrice'])) {
-
-//           if($_POST['dayPrice'] != "") {
-
-//           $dayPrice = sanitize_text_field($_POST['dayPrice']);
-
-//           if(is_numeric($dayPrice)) {
-//                 update_post_meta($post_id, 'dayPrice', $dayPrice);
-
-//           } else {
-
-//                   echo "<style>#priceAlert{display:block !important;}</style>";
-//           }
-
-//         }else {
-//             delete_post_meta($post_id,'dayPrice');
-//           }
-
-//         }
-
-//          if (isset($_POST['weekPrice'])) {
-
-//           if($_POST['weekPrice'] != "") {
-
-//           $weekPrice = sanitize_text_field($_POST['weekPrice']);
-
-//           if(is_numeric($weekPrice)) {
-//                 update_post_meta($post_id, 'weekPrice', $weekPrice);
-
-//           } else {
-//                   echo "<style>#priceAlert{display:block !important;}</style>";
-
-//           }
-
-//           }else {
-//             delete_post_meta($post_id,'weekPrice');
-//           }
-
-//         }
-
-//         if($_POST['classDes'] != "") {
-//           addMeta($_POST['classDes'], 'classDes', $classDes );
-
-//         }
-
-//           if($_POST['dayDes'] != "") {
-//           addMeta($_POST['dayDes'], 'dayDes', $dayDes );
-
-          
-//         }
-
-//           if($_POST['weekDes'] != "") {
-//           addMeta($_POST['weekDes'], 'weekDes', $weekDes );
-
-//         }
-
-//          if($_POST['priceLink'] != "") {
-
-          
-//            if(is_valid_domain_name($_POST['priceLink']) === true) {
-
-//           addMeta($_POST['priceLink'], 'priceLink', $priceLink );
-                
-
-//         } else {
-//                   echo "<script>alert('Please enter a valid URL')</script>";
-                  
-//         }
-
-//       }
-// }
-// }
-// }
-
-
-
-
  
 if (isset($_POST["fjekncjkedwlkkjfnhbnmsnuriukjs"])) {
   if(wp_verify_nonce($_POST['fjekncjkedwlkkjfnhbnmsnuriukjs'], 'class_update' )) {
@@ -636,6 +534,7 @@ addMeta($_POST['instructorDesUp4'], 'instructorDes4', $instructorDesUp5 );
 ?>'>
 </div>
 
+<div class="center">
 <div id="logo-pic">
   <form id="logoForm" enctype="multipart/form-data" method="post">
 <?php wp_nonce_field( 'logo_img_form', 'sfndklnfdlnkdsnkdlnjkfxjridjg' ); ?>
@@ -652,6 +551,8 @@ addMeta($_POST['instructorDesUp4'], 'instructorDes4', $instructorDesUp5 );
     } else {
     $logoURL = wp_get_attachment_url($logo);
       echo $logoURL;
+
+       set_post_thumbnail($post_id, $logo);
     }
 
     ?>">
@@ -669,6 +570,7 @@ addMeta($_POST['instructorDesUp4'], 'instructorDes4', $instructorDesUp5 );
 
 </div>
 
+  </div>
 
 
 
@@ -758,11 +660,11 @@ if (sizeof($taxonomy) !== 0) {
 
 
   if ($website != "") {
-    echo '<a href="https://'.$website.'"><i id="websiteIcon" title="Website" class="fas fa-link fa-2x topIcon"></i></a>';
+    echo '<a href="'.$website.'"><i id="websiteIcon" title="Website" class="fas fa-link fa-2x topIcon"></i></a>';
   }
 
    if ($facebook != "") {
-    echo '<a href="https://'.$facebook.'"><i id="facebookIcon" title="Facebook page" class="fab fa-facebook-square fa-2x topIcon"></i></a>';
+    echo '<a href="'.$facebook.'"><i id="facebookIcon" title="Facebook page" class="fab fa-facebook-square fa-2x topIcon"></i></a>';
     
   }
 
@@ -1644,7 +1546,7 @@ $priceLink = get_post_meta($id,'priceLink',true);
       $imgArray = get_post_meta($post_id, "slide_img_array", true);
       foreach($imgArray as $key => $img) {
         if ($key == 0) {
-              set_post_thumbnail($post_id, $imgArray[$key]);
+             
         $imageSrc = wp_get_attachment_url($imgArray[$key]);
   echo "<li id='Pslide-".$key."' class='carousel-item active' name = 'Pslide-".$key."'><img class='slideImg w-100' src='".$imageSrc."'> </li>";
     } else {
