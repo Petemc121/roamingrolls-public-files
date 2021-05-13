@@ -2374,19 +2374,6 @@ html {
   max-height: 400px;
 }
 
-.accordion {
-  width: 30%;
-  justify-content: center;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-@media only screen and (max-width: 600px) {
-  .accordion {
-    width: 50%;
-  }
-}
-
 .inAccord {
   margin-bottom: 30px;
   margin-top: 30px;
@@ -2403,7 +2390,6 @@ html {
   .inCard {
     width: 280px;
     position: relative;
-    height: 280px;
   }
 }
 
@@ -2464,8 +2450,14 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly !important;
-  width: 90%;
+  width: 70%;
   flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1200px) {
+  #instructorForm {
+    width: 90%;
+  }
 }
 
 #editInstruct {
@@ -2636,8 +2628,9 @@ html {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-  height: 260px !important;
+  height: 300px !important;
   width: 300px;
+
   align-items: center;
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -2781,13 +2774,13 @@ html {
   outline: none;
   border: none;
   text-align: center;
-  font-weight: bold;
   display: none;
 }
 
 .card-body {
   background-color: #e5e9f5;
   display: flex;
+  position: relative;
   height: 200px;
   width: 300px;
   display: flex !important;
