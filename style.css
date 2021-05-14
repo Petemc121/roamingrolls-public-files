@@ -1895,8 +1895,8 @@ body {
 
 #saveLogoPic {
   position: absolute;
-  top: 450px;
-  right: 25%;
+  top: 150px;
+  left: 120px;
   color: white;
   width: 50px;
   display: none;
@@ -1904,54 +1904,12 @@ body {
 
 #cancelLogoPic {
   position: absolute;
-  top: 450px;
-  right: 20%;
+  top: 150px;
+  left: 180px;
   color: white;
   width: 60px;
   background-color: #ad0e2c;
   display: none;
-}
-
-@media only screen and (max-width: 1200px) {
-  #saveLogoPic {
-    position: absolute;
-    top: 450px;
-    right: 30%;
-    color: white;
-    width: 50px;
-    display: none;
-  }
-
-  #cancelLogoPic {
-    position: absolute;
-    top: 450px;
-    right: 18%;
-    color: white;
-    width: 60px;
-    background-color: #ad0e2c;
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #saveLogoPic {
-    position: absolute;
-    top: 450px;
-    right: 30%;
-    color: white;
-    width: 50px;
-    display: none;
-  }
-
-  #cancelLogoPic {
-    position: absolute;
-    top: 450px;
-    right: 15%;
-    color: white;
-    width: 60px;
-    background-color: #ad0e2c;
-    display: none;
-  }
 }
 
 #cancelLogoPic:hover {
