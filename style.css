@@ -1618,10 +1618,21 @@ h3 {
   margin-left: -1px;
 }
 
+#gymCardClasses
+{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  left:20px;
+  height:100%;
+  padding:10px;
+}
+
 @media only screen and (max-width: 700px) {
   #gymCards {
     flex-direction: column;
-    height: 500px;
+    height: 800px;
     width: 400px;
   }
 
@@ -1636,12 +1647,17 @@ h3 {
     margin-top: -5px;
     margin-bottom: 5px;
   }
+
+  #gymCardClasses
+{
+  left:-80px;
+}
 }
 
 @media only screen and (max-width: 400px) {
   #gymCards {
     flex-direction: column;
-    height: 450px;
+    height: 800px;
     width: 270px;
   }
 
@@ -1656,6 +1672,11 @@ h3 {
     max-height: 30px;
     overflow: hidden;
   }
+
+  #gymCardClasses
+{
+  left:-20px;
+}
 }
 
 .gymInfo {
@@ -1670,16 +1691,7 @@ h3 {
   height:100%;
 }
 
-#gymCardClasses
-{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  position:relative;
-  left:20px;
-  height:100%;
-  padding:10px;
-}
+
 
 #search {
   text-align: center;
@@ -1712,6 +1724,22 @@ h3 {
   #searchRules {
     width: 300px !important;
   }
+
+
+
+  .gymInfo {
+    border-right:none;
+    border-left:none;
+    left:0px;
+  }
+
+  .gymCards
+  {
+    width:100%;
+
+  }
+
+  
 }
 
 #searchBarContainer {
@@ -2217,7 +2245,7 @@ body {
   border-top: none;
   border-bottom: none;
   border-right: none;
-  background-image: linear-gradient(#0a0a23, #071a4b);
+  background-color:#12283D;
   margin-top: 5px;
   text-align: center;
   width: 100%;
@@ -2234,7 +2262,7 @@ body {
 
 .bottomLine {
   height: 5px;
-  background-color: #405eaa;
+  background-color: #CDAF23;
   width: 0%;
   position: absolute;
   transition: all 0.5s;
@@ -2316,7 +2344,7 @@ body {
   overflow-y: hidden;
 }
 
-#readLess {
+#readLess2 {
   display: none;
 }
 
@@ -2535,6 +2563,11 @@ html {
   flex-direction: column;
 }
 
+.classText
+{
+  display:none;
+}
+
 .classes {
   display: flex;
   justify-content: space-between;
@@ -2625,7 +2658,7 @@ html {
 }
 
 .instruct-card {
-  background-color: rgb(27, 36, 66) !important;
+  background-color: #12283D!important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
